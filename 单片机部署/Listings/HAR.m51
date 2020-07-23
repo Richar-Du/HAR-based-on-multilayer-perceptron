@@ -1,0 +1,279 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    06/18/2020  09:07:48  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+F:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\HAR.obj TO .\Objects\HAR PRINT (.\Listings\HAR.m51) RAMSIZE
+>>  (256) XDATA (0X0000-0XFFFF)
+
+
+MEMORY MODEL: LARGE WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\HAR.obj (HAR)
+  F:\KEIL_V5\C51\LIB\C51FPL.LIB (?C?FPADD)
+  F:\KEIL_V5\C51\LIB\C51FPL.LIB (?C?FPMUL)
+  F:\KEIL_V5\C51\LIB\C51FPL.LIB (?C?FPDIV)
+  F:\KEIL_V5\C51\LIB\C51FPL.LIB (?C?FPCMP)
+  F:\KEIL_V5\C51\LIB\C51FPL.LIB (EXP)
+  F:\KEIL_V5\C51\LIB\C51FPL.LIB (ATAN)
+  F:\KEIL_V5\C51\LIB\C51FPL.LIB (?C?FPGETOPN)
+  F:\KEIL_V5\C51\LIB\C51FPL.LIB (?C?FCAST)
+  F:\KEIL_V5\C51\LIB\C51FPL.LIB (?C?CASTF)
+  F:\KEIL_V5\C51\LIB\C51FPL.LIB (?C?FPSERIES)
+  F:\KEIL_V5\C51\LIB\C51L.LIB (?C_INIT)
+  F:\KEIL_V5\C51\LIB\C51L.LIB (?C?LNEG)
+  F:\KEIL_V5\C51\LIB\C51L.LIB (?C?LLDCODE)
+  F:\KEIL_V5\C51\LIB\C51L.LIB (?C?LLDXDATA0)
+  F:\KEIL_V5\C51\LIB\C51L.LIB (?C?LLDCODE0)
+  F:\KEIL_V5\C51\LIB\C51L.LIB (?C?LSTXDATA)
+  F:\KEIL_V5\C51\LIB\C51L.LIB (?C?LSTKXDATA)
+  F:\KEIL_V5\C51\LIB\C51L.LIB (?C?OFFXADD)
+
+
+LINK MAP OF MODULE:  .\Objects\HAR (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+                    0008H     0018H                  *** GAP ***
+            BIT     0020H.0   0000H.2   UNIT         _BIT_GROUP_
+                    0020H.2   0000H.6                *** GAP ***
+            IDATA   0021H     0001H     UNIT         ?STACK
+
+            * * * * * * *  X D A T A   M E M O R Y  * * * * * * *
+            XDATA   0000H     1C66H     UNIT         ?XD?HAR
+            XDATA   1C66H     0004H     UNIT         _XDATA_GROUP_
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     BB80H     UNIT         ?CO?HAR
+            CODE    BB83H     1C7FH     UNIT         ?C_INITSEG
+            CODE    D802H     0523H     UNIT         ?PR?MAIN?HAR
+            CODE    DD25H     04A6H     UNIT         ?C?LIB_CODE
+            CODE    E1CBH     0122H     UNIT         ?PR?ATAN?ATAN
+            CODE    E2EDH     009AH     UNIT         ?PR?EXP?EXP
+            CODE    E387H     008CH     UNIT         ?C_C51STARTUP
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  06/18/2020  09:07:48  PAGE 2
+
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\HAR (?C_STARTUP)
+
+
+SEGMENT                           BIT_GROUP          XDATA_GROUP
+  +--> CALLED SEGMENT          START    LENGTH     START    LENGTH
+------------------------------------------------------------------
+?C_C51STARTUP                  -----    -----      -----    -----
+  +--> ?PR?MAIN?HAR
+  +--> ?C_INITSEG
+
+?PR?MAIN?HAR                   -----    -----      -----    -----
+  +--> ?CO?HAR
+  +--> ?PR?ATAN?ATAN
+  +--> ?PR?EXP?EXP
+
+?PR?ATAN?ATAN                  0020H.0  0000H.2    1C66H    0004H
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\HAR (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:E387H         SEGMENT       ?C_C51STARTUP
+  I:0021H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:E38AH         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:E387H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:E387H         LINE#         133
+  C:E389H         LINE#         134
+  C:E38AH         LINE#         135
+  C:E38BH         LINE#         136
+  C:E38DH         LINE#         185
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  06/18/2020  09:07:48  PAGE 3
+
+
+  C:E390H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        HAR
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  X:0000H         PUBLIC        label
+  D:00B0H         PUBLIC        P3
+  D:00C0H         PUBLIC        P4
+  D:00C8H         PUBLIC        P5
+  D:00E8H         PUBLIC        P6
+  D:00F8H         PUBLIC        P7
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  B:00C8H.2       PUBLIC        SUCCESS
+  B:00C8H.3       PUBLIC        FAIL
+  X:0002H         PUBLIC        output_weight
+  D:00D8H         PUBLIC        CCON
+  C:D802H         PUBLIC        main
+  X:0642H         PUBLIC        denominator
+  X:0646H         PUBLIC        count
+  X:0648H         PUBLIC        output_neuron
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  X:0658H         PUBLIC        output_bias
+  D:008EH         PUBLIC        AUXR
+  X:0668H         PUBLIC        max
+  C:0003H         PUBLIC        hidden_weight
+  X:066CH         PUBLIC        i
+  X:066EH         PUBLIC        j
+  X:0670H         PUBLIC        k
+  X:0672H         PUBLIC        hidden_neuron
+  X:0802H         PUBLIC        hidden_bias
+  X:0992H         PUBLIC        X_test
+  D:00D0H         PUBLIC        PSW
+  X:1C52H         PUBLIC        Y_test
+  -------         PROC          MAIN
+  C:D802H         LINE#         140
+  C:D802H         LINE#         141
+  C:D805H         LINE#         142
+  C:D807H         LINE#         143
+  C:D809H         LINE#         145
+  C:D810H         LINE#         146
+  C:D817H         LINE#         147
+  C:D81EH         LINE#         148
+  C:D8F1H         LINE#         149
+  C:D90EH         LINE#         150
+  C:D998H         LINE#         151
+  C:D9B8H         LINE#         152
+  C:D9C2H         LINE#         153
+  C:D9C9H         LINE#         154
+  C:D9D0H         LINE#         155
+  C:DA8CH         LINE#         156
+  C:DAA9H         LINE#         157
+  C:DB33H         LINE#         158
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  06/18/2020  09:07:48  PAGE 4
+
+
+  C:DB7EH         LINE#         159
+  C:DBA0H         LINE#         160
+  C:DBB9H         LINE#         161
+  C:DBF3H         LINE#         162
+  C:DC03H         LINE#         163
+  C:DC0BH         LINE#         164
+  C:DC1FH         LINE#         165
+  C:DC38H         LINE#         166
+  C:DC69H         LINE#         167
+  C:DC96H         LINE#         168
+  C:DCA3H         LINE#         169
+  C:DCA3H         LINE#         170
+  C:DCB4H         LINE#         171
+  C:DCDCH         LINE#         172
+  C:DCEAH         LINE#         173
+  C:DCEAH         LINE#         174
+  C:DD0CH         LINE#         175
+  C:DD1DH         LINE#         176
+  C:DD1FH         LINE#         177
+  C:DD21H         LINE#         178
+  C:DD21H         LINE#         179
+  C:DD23H         LINE#         180
+  C:DD23H         LINE#         181
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        HAR
+
+  -------         MODULE        ?C?FPADD
+  C:DD2CH         PUBLIC        ?C?FPADD
+  C:DD28H         PUBLIC        ?C?FPSUB
+  -------         ENDMOD        ?C?FPADD
+
+  -------         MODULE        ?C?FPMUL
+  C:DE1DH         PUBLIC        ?C?FPMUL
+  -------         ENDMOD        ?C?FPMUL
+
+  -------         MODULE        ?C?FPDIV
+  C:DF26H         PUBLIC        ?C?FPDIV
+  -------         ENDMOD        ?C?FPDIV
+
+  -------         MODULE        ?C?FPCMP
+  C:DFC5H         PUBLIC        ?C?FPCMP
+  C:DFC3H         PUBLIC        ?C?FPCMP3
+  -------         ENDMOD        ?C?FPCMP
+
+  -------         MODULE        EXP
+  C:E325H         PUBLIC        _EXP
+  -------         ENDMOD        EXP
+
+  -------         MODULE        ATAN
+  C:E1EBH         PUBLIC        _ATAN
+  -------         ENDMOD        ATAN
+
+  -------         MODULE        ?C?FCAST
+  C:E090H         PUBLIC        ?C?FCASTC
+  C:E08BH         PUBLIC        ?C?FCASTI
+  C:E086H         PUBLIC        ?C?FCASTL
+  -------         ENDMOD        ?C?FCAST
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  06/18/2020  09:07:48  PAGE 5
+
+
+
+  -------         MODULE        ?C?CASTF
+  C:E0C4H         PUBLIC        ?C?CASTF
+  -------         ENDMOD        ?C?CASTF
+
+  -------         MODULE        ?C?LNEG
+  C:E148H         PUBLIC        ?C?LNEG
+  -------         ENDMOD        ?C?LNEG
+
+  -------         MODULE        ?C?LLDCODE
+  C:E156H         PUBLIC        ?C?LLDCODE
+  -------         ENDMOD        ?C?LLDCODE
+
+  -------         MODULE        ?C?LLDXDATA0
+  C:E166H         PUBLIC        ?C?LLDXDATA0
+  -------         ENDMOD        ?C?LLDXDATA0
+
+  -------         MODULE        ?C?LLDCODE0
+  C:E172H         PUBLIC        ?C?LLDCODE0
+  -------         ENDMOD        ?C?LLDCODE0
+
+  -------         MODULE        ?C?LSTXDATA
+  C:E182H         PUBLIC        ?C?LSTXDATA
+  -------         ENDMOD        ?C?LSTXDATA
+
+  -------         MODULE        ?C?LSTKXDATA
+  C:E18EH         PUBLIC        ?C?LSTKXDATA
+  -------         ENDMOD        ?C?LSTKXDATA
+
+  -------         MODULE        ?C?OFFXADD
+  C:E1BFH         PUBLIC        ?C?OFFXADD
+  -------         ENDMOD        ?C?OFFXADD
+
+Program Size: data=9.2 xdata=7274 code=58387
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,5 @@
+".\Objects\STARTUP.obj",
+".\Objects\HAR.obj" 
+TO ".\Objects\HAR" 
+PRINT(".\Listings\HAR.m51") RAMSIZE(256) 
+XDATA( 0X0000-0XFFFF )
